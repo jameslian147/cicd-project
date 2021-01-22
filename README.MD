@@ -13,14 +13,73 @@ https://docs.google.com/spreadsheets/d/1g__ADvqWh5nC4_anMRsUzwtnP_uprrVialXOOlmv
 ### Quick view of architecture
 ![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/architecture.png?raw=true "Architecture")
 
+# Overview ![Python application test with Github Actions](https://github.com/jameslian147/cicd-project/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)
+This is a python project that demostrates the necessary steps in setting up CI CD in Azure and Github actions
+
+## Project Plan
+Trello board
+https://trello.com/b/j66JLQ23
+
+Management Spreadsheet
+https://docs.google.com/spreadsheets/d/1g__ADvqWh5nC4_anMRsUzwtnP_uprrVialXOOlmvjC0/edit?usp=sharing
+
+## Instructions
+
+### Quick view of architecture
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/architecture.png?raw=true "Architecture")
+
 ### In brief
-This project demostrates the steps necessary to setup a pipeline in azure devops against a git repository. The outcome will have a azure pipeline deploying new changes upon new commits made in the git repository
+This is the desired setup we want to do at the end of this project. When there are changes to the git repo, eg. file modification, Gitactions will auto run the Makefile all thru the file .github/workflows/pythonapp.yml.
+
+Azure Pipelines works quite similar with Gitactions except we will be doing deployment to app services after a successful build.
 
 ### Prerequisites
-Azure Portal Account
-Azure Dev Account
-Git project forked from this project
+1. Account in Azure Devops
+2. Account in Github
+3. Account in Azure Portal
+4. Python3 with brew
+5. virtual environments https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+6. a fork of https://github.com/jameslian147/cicd-project
 
+
+
+### Build Steps in local desktop
+1. cd into directory
+2. make setup for environment
+```
+make setup
+```
+3. go in to virual environment
+```
+source ~/.udacity-devops/bin/activate
+```
+4. make project
+```
+make all
+```
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/build-all.png?raw=true "Build all")
+5. load test
+```
+make loadtest
+```
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/loadtest1.png?raw=true "load test")
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/loadtest2.png?raw=true "load test")
+
+
+### GitAction Steps
+1. Go to the repo page and click Actions
+
+2. Click on Create new workflow >> set up a workflow yourself
+
+3. Copy the contents of ex-github.yml and paste it on the edit box
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/github-flow.png?raw=true "Cloud Shell")
+
+4. Click `Start Commit` >> create new file
+
+5. Go back to `Actions` and you will see a new gitflow
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/github-flow-actions.png?raw=true "Cloud Shell")
+
+6. Now your project will detect any changes on `master` branch and start build
 
 ### Azure Pipeline Steps
 1. Go to Azure Portal
