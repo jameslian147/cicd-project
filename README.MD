@@ -164,7 +164,7 @@ To provide visual ui for showing prediction
 ## Demo 
 
 Link to demo
-https://youtu.be/2jvoZ5oRJcs
+https://youtu.be/61iOeUC60y0
 
 
 
