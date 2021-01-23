@@ -80,6 +80,8 @@ make loadtest
 ![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/github-flow-actions.png?raw=true "Cloud Shell")
 
 6. Now your project will detect any changes on `master` branch and start build
+![alt text](https://github.com/jameslian147/cicd-project/blob/master/images/github-actions.png?raw=true "Cloud Shell")
+
 
 ### Azure Pipeline Steps
 1. Go to Azure Portal
